@@ -30,6 +30,6 @@ final class Tariff extends DB
         $query->execute([$userId, $serviceId]);
 
         $tariffs = $query->fetchAll(PDO::FETCH_ASSOC);
-        return $tariffs ?? [];
+        return empty($tariffs) ? [] : $tariffs;
     }
 }

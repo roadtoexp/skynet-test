@@ -24,7 +24,6 @@ final class User extends DB
         $query->execute([$userId, $serviceId]);
 
         $tariff = $query->fetch(PDO::FETCH_ASSOC);
-
-        return $tariff ?? [];
+        return empty($tariff) ? [] : $tariff;
     }
 }
