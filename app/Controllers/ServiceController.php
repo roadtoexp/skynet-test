@@ -28,9 +28,9 @@ final class ServiceController extends BaseApiController
             $tariffId
         )) {
             $this->response(
-                'HTTP/1.1 404 Not Found',
+                'HTTP/1.1 200 OK',
                 [
-                    'result' => 'error',
+                    'result' => 'ok',
                 ]
             );
         }
