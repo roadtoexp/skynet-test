@@ -22,8 +22,8 @@ final class Service extends DB
             user_id = ? AND
             ID = ?
          ';
-        $query = $this->db->prepare($sqlQuery);
 
-        return $query->execute([$tarifId, $payday, $userId, $serviceId]);
+        $query = $this->db->prepare($sqlQuery);
+        return $query->execute([$tariffId, $payday, $userId, $serviceId]);
     }
 }
